@@ -29,7 +29,7 @@ list.addEventListener("click", function(e){
 if(e.target.tagName==="LI"){
     e.target.classList.toggle("checked");
     saveData();
-} 
+}
 else if(e.target.tagName==="SPAN"){
     e.target.parentElement.remove();
     saveData();
@@ -44,8 +44,11 @@ function showData(){
 }
 showData();
 
-inputBox.addEventListener("keypress", function(event) {
+document.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
       addtask();
     }
-  });
+    else {
+        inputBox.focus();
+    }
+});

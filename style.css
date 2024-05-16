@@ -5,6 +5,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+:root{
+    --bg: #353f5b;
+}
 body::-webkit-scrollbar{
 	display: none;                    /* hide scrollbar for chrome,safari & opera */
 }
@@ -12,26 +15,22 @@ html{
 	scrollbar-width: none;           /* hide scrollbar for firefox */
 }
 body{
-    background: #0F111A;
-    /* text-align:center;
-    margin: 0 auto; */
+    background-color: var(--bg);
+    text-align:center;
+    zoom: 110%;
+    margin: 0 auto;
 	-ms-overflow-style: none;        /* hide scrollbar for edge & IE */
 }
 .container{
-    /* width: 100%; */
     min-height: 73vh;
-    /* box-sizing: border-box; */
     overflow: hidden;
-
     position: relative;
     text-align:center;
     margin: 0 auto;
     margin-top: 100px;
-    /* box-shadow: 0px 0px 10px 0px #464646; */
-    /* background: #0F111A; */
     color: #fff;
-
     max-width: 600px;
+    margin-bottom: 2vh;
 }
 .container h3{
     font-size: 27px;
@@ -45,11 +44,9 @@ body{
     margin-bottom: 50px;
 }
 input{
-    border: 1px solid;
-    border-color: #5B33E6 #AC53F0 #AC53F0 #5B33E6;
+    border: none;
 }
 input:focus {
-    background-color: #181b2869;
     outline: none;
 }
 input[type="text"] {
@@ -73,19 +70,16 @@ input[type="text"] {
     cursor: pointer;
 }
 .input button{
-    border: 1px solid;
-	border-color: #5B33E6 #AC53F0 #AC53F0 #5B33E6;
-    /* border-radius: 10px; */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
     border-radius: 5px;
-    padding: 5px 10px 5px 10px;
+    padding: 8px 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 .input button:hover{
-    /* border:1px solid transparent; */
-    /* background: #464646; */
-    cursor: pointer;
-    border-color: #5B33E6 #AC53F0 #AC53F0 #5B33E6;
-    border-radius: 5px;
-    background-image: linear-gradient(to right,#5B33E6,#AC53F0);
+    background-color: #0056b3;
 }
 ul li{
     display: flex;
@@ -98,12 +92,9 @@ ul li{
     margin-top: 20px;
     user-select: none;
     cursor: pointer;
-    /* background-color: #555;
-    color: #fff; */
     border-radius: 10px;
     position: relative;
     align-items: center;
-
     background-color: #181B28;
 	border: 1px solid #3B3F51;
 	color: #CCCCCC;
@@ -130,9 +121,6 @@ ul li span{
     align-items: center;
     justify-content: center;
     right: 0;
-    /* line-height: 18px; */
-    /* background-color: #555;
-    color: #fff; */
     border-radius: 20px;
     font-weight: 550;
     font-size: 25px;
